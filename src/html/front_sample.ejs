@@ -1,0 +1,90 @@
+<%
+var pageData = {
+  pageTitle: "first",
+  key: "index"
+}
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('./_partial/head', pageData) %>
+<body>
+  <header>
+    <div class="container">
+      <i id="open_menu" class="fas fa-bars"></i>
+      <nav id="menu">
+        <i id="close_menu" class="fas fa-times"></i>
+        <ul>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Menu</a></li>
+        </ul>
+      </nav>
+      <h1>My app12</h1>
+    </div>
+  </header>
+
+  <section class="carousel">
+    <div class="multiple-items">
+      <div><h3>1</h3></div>
+      <div><h3>2</h3></div>
+      <div><h3>3</h3></div>
+      <div><h3>4</h3></div>
+      <div><h3>5</h3></div>
+      <div><h3>6</h3></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h1>Features</h1>
+      <section class="feature">
+        <img src="images/asama.png">
+        <p>hello hello hello hello hello hello hello hello hello hello hello hello hello </p>
+      </section>
+      <section class="feature">
+        <img src="images/sakura.png">
+        <p>hello hello hello hello hello hello hello hello hello hello hello hello hello </p>
+      </section>
+      <section class="feature">
+        <img src="images/snow.png">
+        <p>hello hello hello hello hello hello hello hello hello hello hello hello hello </p>
+      </section>
+    </div>
+  </section>
+
+  <section class="news">
+    <div class="container">
+      <h1>News</h1>
+      <div class="flex">
+        <article class="news-item">
+          <img src="images/sky.jpg">
+          <p>hello hello hello hello hello hello hello hello hello hello hello hello hello </p>
+        </article>
+        <article class="news-item">
+          <img src="images/rainbow.jpg">
+          <p>hello hello hello hello hello hello hello hello hello hello hello hello hello </p>
+        </article>
+        <article class="news-item">
+          <img src="images/sea.jpg">
+          <p>hello hello hello hello hello hello hello hello hello hello hello hello hello </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-to-use">
+    <div class="container">
+      <h1 class="section-title">How to use</h1>
+        <div class="iframe-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/GyUM9v17FTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; simultechnology.com
+  </footer>
+  <script src="bundle.js"></script>
+</body>
+</html>

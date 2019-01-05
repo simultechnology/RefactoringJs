@@ -1,0 +1,8 @@
+
+.slick-prev,
+.slick-next {
+  &.my-button::before,
+  &.my-button::after {
+    color: #333;
+  }
+}

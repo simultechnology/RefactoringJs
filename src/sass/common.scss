@@ -1,0 +1,234 @@
+
+body {
+  background: #f8f8f8;
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  margin: 0;
+  color: #333;
+}
+
+p {
+  line-height: 2;
+}
+
+header {
+  h1 {
+    font-size: 28px;
+    font-weight: normal;
+  }
+
+  #menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    display: none;
+
+    &.shown {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px 20px;
+    }
+
+    li {
+      line-height: 2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  #open_menu {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  #close_menu {
+    padding: 15px;
+    float: right;
+    cursor: pointer;
+  }
+}
+
+body > section {
+  h1 {
+    text-align: center;
+    font-weight: normal;
+    margin: 0 0 60px;
+  }
+
+  padding: 60px 0;
+}
+
+body > section:nth-of-type(odd) {
+  background: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.feature {
+  img {
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+.news-item {
+  img {
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+.how-to-use {
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 100% : x% = 16 : 9 */
+
+  .iframe-wrapper {
+    //background: pink;
+
+    /* %指定の場合、親領域の幅に対しての割合 */
+    //padding-bottom: 25%;
+    padding-bottom: 56.25%;
+    height: 0;
+    position: relative;
+  }
+}
+
+.carousel {
+  width: 75%;
+  margin: auto;
+
+  h3 {
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 60px 0;
+  color: #ccc;
+}
+
+@media (min-width: 570px) {
+  .feature {
+    overflow: hidden;
+
+    img {
+      width: 50%;
+    }
+
+    p {
+      width: 45%;
+    }
+
+    &:nth-of-type(odd) p {
+      float: right;
+      padding-left: 5%;
+    }
+
+    &:nth-of-type(even) p {
+      float: left;
+      padding-right: 5%;
+    }
+  }
+
+  .news {
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .news-item {
+    width: 30%;
+  }
+}
+
+@media (min-width: 912px) {
+  .container {
+    width: 820px;
+  }
+
+  header {
+    #open_menu {
+      display: none;
+    }
+
+    #close_menu {
+      display: none;
+    }
+
+    #menu {
+      display: block;
+      position: static;
+      background: transparent;
+      color: #333;
+
+      ul {
+        padding: 0;
+        float: right;
+      }
+
+      li {
+        display: inline-block;
+        width: 60px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.sample {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.foo {
+  flex: 1;
+}
+
+.bar {
+  flex: 1 1;
+}
+
+.foz {
+  flex: 1 1 0;
+}
+
+.baz {
+  flex: 1 1 0;
+}
