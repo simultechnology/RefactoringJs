@@ -6,14 +6,6 @@ function createStatementData (invoice, plays) {
   statementData.totalVolumeCredits = totalVolumeCredits(statementData)
   return statementData
 
-  function totalAmount (data) {
-    return data.performances.reduce((total, p) => total + p.amount, 0)
-  }
-
-  function totalVolumeCredits (data) {
-    return data.performances.reduce((total, p) => total + p.volumeCredits, 0)
-  }
-
   function enrichPerformance (aPerformance) {
     const result = Object.assign({}, aPerformance)
     result.play = playFor(result)
@@ -52,6 +44,12 @@ function createStatementData (invoice, plays) {
       result += Math.floor(aPerformance.audience / 5)
     }
     return result
+  }
+  function totalAmount (data) {
+    return data.performances.reduce((total, p) => total + p.amount, 0)
+  }
+  function totalVolumeCredits (data) {
+    return data.performances.reduce((total, p) => total + p.volumeCredits, 0)
   }
 }
 
